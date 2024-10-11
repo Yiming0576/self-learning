@@ -1,3 +1,40 @@
+// regex  using test method
+
+let sentence = "The dog chase the cat.";
+let regex11 = /the/;
+
+let myString = "Hello, World!";
+let myRegex1 = /Hello/;
+let resultOne1 = myRegex.test(myString);
+console.log({ result: resultOne1 });
+
+let waldoIsHiding = "Somewhere Waldo is hiding in this text"
+let waldoRegex = /Waldo/
+let resultTwo2 = waldoRegex.test(waldoIsHiding);
+console.log({result: resultTwo2});
+
+
+// With | to add more cases to test
+/**
+ * n JavaScript regular expressions, the pipe symbol (|) acts as the OR operator,
+ *  allowing you to match one pattern or another. 
+ */
+let petString = "James has a pet cat."
+let petRegex = /dog|cat|bird|fish|/
+let resultThree = petRegex.test(petString)
+console.log({result: resultThree});
+
+// case insensitive 
+/**
+ * i (case-insensitive): 
+ * This flag makes the regex case-insensitive, 
+ * meaning it will match letters regardless of whether 
+ * they are uppercase or lowercase.
+ */
+let codeString = "freeCodeCamp"
+let fccRegex = /freecodecamp/i
+let resultFour = fccRegex.test(codeString)
+console.log({result: resultFour});
 
 // using the extractStr.match
 let extractStr = "Extract the word 'coding' from this string"
@@ -107,8 +144,23 @@ console.log("abc".match(regex));  // Matches "a"
 console.log("bc".match(regex));   // No match, since "a" is not present
 
 
+// * 
+/**
+ *  zero or more than zero
+ */
+
+let soccerWord = "goooooooooooal!"
+let gPhrase = "gut feeling"
+let oPhrase = "over the moon"
+let goRegex = /go*/
+console.log(soccerWord.match(goRegex));
+console.log(gPhrase.match(goRegex));
+console.log(oPhrase.match(goRegex));
 
 
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrrrrgggghhh"
+let chewieRegex = /Aa*/
+console.log(chewieQuote.match(chewieRegex));
 
 
 
